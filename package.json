@@ -1,0 +1,19 @@
+{
+  "name": "Massively",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.37.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
