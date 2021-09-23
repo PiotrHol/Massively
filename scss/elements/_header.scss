@@ -1,0 +1,51 @@
+.header {
+  height: calc(100vh - 65px);
+  background: transparent;
+  color: white;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 7em;
+    font-weight: 900;
+    letter-spacing: .05em;
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    font-style: italic;
+    line-height: 2;
+    margin-bottom: 37px;
+    letter-spacing: .05em;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    span {
+      display: block;
+      width: 81px;
+      height: 81px;
+      border: 2px solid white;
+      border-radius: 50%;
+      position: relative;
+      &::before {
+        content: "\f063";
+        font-size: 1.75em;
+        position: relative;
+        top: 25px;
+        left: 0;
+      }
+    }
+  }
+}
