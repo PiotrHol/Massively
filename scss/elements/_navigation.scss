@@ -1,0 +1,59 @@
+nav {
+  background-color: rgba(255, 255, 255, 0.175);
+  display: flex;
+  justify-content: space-between;
+  height: 5em;
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-main {
+    a {
+      display: inline-block;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 1em;
+      font-weight: 700;
+      letter-spacing: .05em;
+      padding: 1.84em 2em;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .nav-main__active {
+      background-color: white;
+      color: black;
+
+      &:hover {
+        color: #18bfef;
+        background-color: white;
+      }
+    }
+  }
+
+  .nav-icons {
+    margin-right: 2em;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 1.25rem;
+      color: white;
+      font-size: 1.75em;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+      &:hover {
+        color: #18bfef;
+      }
+    }
+  }
+}

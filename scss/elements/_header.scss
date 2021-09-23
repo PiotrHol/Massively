@@ -1,5 +1,5 @@
 .header {
-  height: calc(100vh - 65px);
+  height: calc(100vh - 5em);
   background: transparent;
   color: white;
   width: auto;
@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
+  padding-top: 10em;
 
   h1 {
     text-transform: uppercase;
