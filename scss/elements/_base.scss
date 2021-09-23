@@ -1,6 +1,11 @@
-@mixin font-style($family, $size, $height, $weight, $color) {
-  font-family: $family;
-  font-size: $size;
-  font-weight: $weight;
-  color: $color;
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 1152px;
+  margin: 0 auto;
 }
