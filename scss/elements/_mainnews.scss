@@ -1,0 +1,103 @@
+.main-news {
+  background-color: white;
+  text-align: center;
+
+  .main-news__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8em 8em 6em 8em;
+
+    .main-news_date {
+      font-family: "Merriweather", serif;
+      font-size: 1.2em;
+      font-weight: 300;
+      color: #212931;
+      margin-bottom: 4rem;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after, &::before {
+          content: "";
+          display: block;
+          width: 432px;
+          height: 2px;
+          background-color: #eeeeee;
+        }
+
+        &::after {
+          margin-left: 3em;
+        }
+
+        &::before {
+          margin-right: 3em;
+        }
+      }
+    }
+
+    .main-news__head {
+      margin-bottom: 2rem;
+      a {
+        color: #212931;
+        font-size: 3.4em;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: .05em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #18bfef;
+        }
+      }
+    }
+
+    .main-news__text {
+      font-family: "Merriweather", serif;
+      font-size: 1.2em;
+      font-weight: 300;
+      line-height: 2.375;
+      font-style: italic;
+      margin-bottom: 4rem;
+    }
+
+    .main-news__image {
+      width: 100%;
+      height: 580px;
+      overflow: hidden;
+      margin-bottom: 4rem;
+
+      img {
+        width: 100%;
+
+        &:hover {
+          transition: transform 0.2s ease-in-out;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .main-news__button {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #212931;
+      border: 2px solid #212931;
+      font-size: 1.2em;
+      font-weight: 900;
+      padding: 1.25em 2.75em;
+      letter-spacing: .07em;
+      transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+      &:hover {
+        color: #18bfef;
+        border-color: #18bfef;
+      }
+    }
+  }
+}
