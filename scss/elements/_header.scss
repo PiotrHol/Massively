@@ -1,7 +1,7 @@
 .header {
   height: calc(100vh - 5em);
   background: transparent;
-  color: white;
+  color: $color-white;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -30,18 +30,18 @@
   }
 
   a {
-    color: white;
+    color: $color-white;
     text-decoration: none;
     display: block;
     width: 81px;
     height: 81px;
-    border: 2px solid white;
+    border: 2px solid $color-white;
     border-radius: 50%;
     transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:hover {
-      color: #18bfef;
-      border-color: #18bfef;
+      color: $color-hover;
+      border-color: $color-hover;
     }
 
     span {

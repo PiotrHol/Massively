@@ -1,5 +1,5 @@
 .main-news {
-  background-color: white;
+  background-color: $color-white;
   text-align: center;
 
   .main-news__wrapper {
@@ -13,7 +13,7 @@
       font-family: "Merriweather", serif;
       font-size: 1.2em;
       font-weight: 300;
-      color: #212931;
+      color: $color-text;
       margin-bottom: 4rem;
 
       span {
@@ -26,7 +26,7 @@
           display: block;
           width: 432px;
           height: 2px;
-          background-color: #eeeeee;
+          background-color: $color-date-border;
         }
 
         &::after {
@@ -42,7 +42,7 @@
     .main-news__head {
       margin-bottom: 2rem;
       a {
-        color: #212931;
+        color: $color-text;
         font-size: 3.4em;
         font-weight: 900;
         line-height: 1.1;
@@ -52,7 +52,7 @@
         transition: color 0.2s ease-in-out;
 
         &:hover {
-          color: #18bfef;
+          color: $color-hover;
         }
       }
     }
@@ -86,8 +86,8 @@
       display: inline-block;
       text-decoration: none;
       text-transform: uppercase;
-      color: #212931;
-      border: 2px solid #212931;
+      color: $color-text;
+      border: 2px solid $color-text;
       font-size: 1.2em;
       font-weight: 900;
       padding: 1.25em 2.75em;
@@ -95,8 +95,8 @@
       transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
       &:hover {
-        color: #18bfef;
-        border-color: #18bfef;
+        color: $color-hover;
+        border-color: $color-hover;
       }
     }
   }

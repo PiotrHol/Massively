@@ -1,5 +1,5 @@
 nav {
-  background-color: rgba(255, 255, 255, 0.175);
+  background-color: $color-bg-nav;
   display: flex;
   justify-content: space-between;
   height: 5em;
@@ -14,7 +14,7 @@ nav {
   .nav-main {
     a {
       display: inline-block;
-      color: white;
+      color: $color-white;
       text-transform: uppercase;
       text-decoration: none;
       font-family: "Source Sans Pro", sans-serif;
@@ -25,17 +25,17 @@ nav {
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: $color-bg-nav-hover;
       }
     }
 
     .nav-main__active {
-      background-color: white;
-      color: black;
+      background-color: $color-white;
+      color: $color-text;
 
       &:hover {
-        color: #18bfef;
-        background-color: white;
+        color: $color-hover;
+        background-color: $color-white;
       }
     }
   }
@@ -47,12 +47,12 @@ nav {
       display: inline-block;
       text-decoration: none;
       margin: 0 1.25rem;
-      color: white;
+      color: $color-white;
       font-size: 1.7em;
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
       &:hover {
-        color: #18bfef;
+        color: $color-hover;
       }
     }
   }
