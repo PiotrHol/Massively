@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$columns: 12;
+$column-base-width: math.div(100%, $columns);
+//$gutters: 10px;
+$width-max-column: 550px;
+
+.grid-container {
+  width: 100%;
+  max-width: 1452px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*="col-"] {
+  min-height: 1px;
+  width: $column-base-width;
+  //padding: $gutters;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: $column-base-width * $i;
+  }
+}
+
+@media (max-width: $width-max-column) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
