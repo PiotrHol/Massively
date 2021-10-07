@@ -42,18 +42,8 @@
     .main-news__head {
       margin-bottom: 2rem;
       a {
-        color: $color-text;
         font-size: 3.4em;
-        font-weight: 900;
         line-height: 1.1;
-        letter-spacing: .05em;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: color 0.2s ease-in-out;
-
-        &:hover {
-          color: $color-hover;
-        }
       }
     }
 
@@ -67,37 +57,12 @@
     }
 
     .main-news__image {
-      width: 100%;
-      height: 580px;
-      overflow: hidden;
       margin-bottom: 4rem;
-
-      img {
-        width: 100%;
-
-        &:hover {
-          transition: transform 0.2s ease-in-out;
-          transform: scale(1.2);
-        }
-      }
     }
 
     .main-news__button {
-      display: inline-block;
-      text-decoration: none;
-      text-transform: uppercase;
-      color: $color-text;
-      border: 2px solid $color-text;
       font-size: 1.2em;
-      font-weight: 900;
       padding: 1.25em 2.75em;
-      letter-spacing: .07em;
-      transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-
-      &:hover {
-        color: $color-hover;
-        border-color: $color-hover;
-      }
     }
   }
 }

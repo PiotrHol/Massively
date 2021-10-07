@@ -8,6 +8,52 @@ body {
 }
 
 .container {
-  width: 1452px;
+  max-width: 1452px;
   margin: 0 auto;
+}
+
+.body-head {
+  a {
+    color: $color-text;
+    font-weight: 900;
+    letter-spacing: .075em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}
+
+.body-img {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    margin-bottom: -5px;
+
+    &:hover {
+      transition: transform 0.2s ease-in-out;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-text;
+  border: 2px solid $color-text;
+  font-weight: 900;
+  letter-spacing: .07em;
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover {
+    color: $color-hover;
+    border-color: $color-hover;
+  }
 }
