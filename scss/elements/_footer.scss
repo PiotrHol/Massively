@@ -5,6 +5,12 @@ footer {
   letter-spacing: 0.075em;
   color: $color-footer;
   text-transform: uppercase;
+  @include mediaTablet {
+    font-size: 1em;
+  }
+  @include mediaMobile {
+    font-size: 0.6em;
+  }
 
   ul {
     width: 100%;
