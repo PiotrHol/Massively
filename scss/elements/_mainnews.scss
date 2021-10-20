@@ -8,6 +8,9 @@
     justify-content: center;
     align-items: center;
     padding: 8em 8em 6em 8em;
+    @include mediaMobile {
+      padding: 4em 3em 4em 3em;
+    }
 
     .main-news_date {
       font-family: "Merriweather", serif;
@@ -15,6 +18,14 @@
       font-weight: 300;
       color: $color-text;
       margin-bottom: 4rem;
+      width: 100%;
+      @include mediaTablet {
+        font-size: 1em;
+      }
+      @include mediaMobile {
+        font-size: 0.8em;
+        margin-bottom: 2rem;
+      }
 
       span {
         display: flex;
@@ -24,7 +35,7 @@
         &::after, &::before {
           content: "";
           display: block;
-          width: 432px;
+          width: 35%;
           height: 2px;
           background-color: $color-date-border;
         }
@@ -41,9 +52,19 @@
 
     .main-news__head {
       margin-bottom: 2rem;
+      width: 80%;
+      @include mediaTablet {
+        width: auto;
+      }
       a {
         font-size: 3.4em;
         line-height: 1.1;
+        @include mediaTablet {
+          font-size: 2em;
+        }
+        @include mediaMobile {
+          font-size: 1.2em;
+        }
       }
     }
 
@@ -54,15 +75,34 @@
       line-height: 2.375;
       font-style: italic;
       margin-bottom: 4rem;
+      width: 55%;
+      @include mediaTablet {
+        width: auto;
+        font-size: 1em;
+      }
+      @include mediaMobile {
+        width: auto;
+        font-size: 0.8em;
+        margin-bottom: 2em;
+      }
     }
 
     .main-news__image {
       margin-bottom: 4rem;
+      @include mediaMobile {
+        margin-bottom: 2rem;
+      }
     }
 
     .main-news__button {
       font-size: 1.2em;
       padding: 1.25em 2.75em;
+      @include mediaTablet {
+        font-size: 1em;
+      }
+      @include mediaMobile {
+        font-size: 0.8em;
+      }
     }
   }
 }

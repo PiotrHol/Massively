@@ -10,9 +10,6 @@ body {
 .container {
   max-width: 1452px;
   margin: 0 auto;
-  @include mediaTablet {
-    padding: 0 15px;
-  }
 }
 
 .body-head {
