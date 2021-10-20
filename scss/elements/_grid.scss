@@ -2,7 +2,6 @@
 
 $columns: 12;
 $column-base-width: math.div(100%, $columns);
-$gutters: 5em;
 $width-max-column: 736px;
 
 .grid-container {
@@ -19,7 +18,10 @@ $width-max-column: 736px;
 [class*="col-"] {
   min-height: 1px;
   width: $column-base-width;
-  padding: $gutters;
+  padding: 5em;
+  @include mediaMobile {
+    padding: 3em;
+  }
 }
 
 @for $i from 1 through 12 {
