@@ -9,6 +9,9 @@
   align-items: center;
   text-align: center;
   padding-top: 10em;
+  @include mediaMobile {
+    height: calc(100vh - 10em);
+  }
 
   h1 {
     text-transform: uppercase;
@@ -17,6 +20,13 @@
     letter-spacing: .05em;
     line-height: 1;
     margin-bottom: 32px;
+    text-align: center;
+    @include mediaTablet {
+      font-size: 5em;
+    }
+    @include mediaMobile {
+      font-size: 3em;
+    }
   }
 
   p {
@@ -27,6 +37,10 @@
     line-height: 2;
     margin-bottom: 37px;
     letter-spacing: .05em;
+    width: 78%;
+    @include mediaTablet {
+      font-size: 1em;
+    }
   }
 
   a {
@@ -38,6 +52,13 @@
     border: 2px solid $color-white;
     border-radius: 50%;
     transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    @include mediaTablet {
+      width: 51px;
+      height: 51px;
+    }
+    @include mediaMobile {
+      display: none;
+    }
 
     &:hover {
       color: $color-hover;
@@ -53,6 +74,10 @@
         position: relative;
         top: 25px;
         left: 0;
+        @include mediaTablet {
+          font-size: 1.5em;
+          top: 12px;
+        }
       }
     }
   }
