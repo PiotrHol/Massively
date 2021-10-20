@@ -3,16 +3,26 @@
   font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
   display: flex;
+  @include mediaTablet {
+    flex-direction: column;
+  }
 
   .form-box {
     width: 50%;
     border-right: 2px solid $color-form-border;
+    @include mediaTablet {
+      width: 100%;
+      border: none;
+    }
 
     form {
       width: 100%;
       display: flex;
       flex-direction: column;
       padding: 5em 5em 3em;
+      @include mediaMobile {
+        padding: 3em 2em 1em;
+      }
 
       .form-section__label {
         display: flex;
@@ -24,6 +34,12 @@
         line-height: 1.5;
         letter-spacing: 0.075em;
         margin-bottom: 24px;
+        @include mediaTablet {
+          font-size: 1em;
+        }
+        @include mediaMobile {
+          font-size: 0.8em;
+        }
 
         .form-inputs {
           margin-top: 12px;
@@ -35,6 +51,12 @@
           font-weight: 300;
           font-size: 1.2em;
           color: $color-form-label;
+          @include mediaTablet {
+            font-size: 1em;
+          }
+          @include mediaMobile {
+            font-size: 0.9em;
+          }
 
           &:focus {
             border-color: $color-hover;
@@ -65,6 +87,13 @@
         letter-spacing: 0.075em;
         padding: 0.8em 0;
         transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        @include mediaTablet {
+          font-size: 1em;
+        }
+        @include mediaMobile {
+          width: 100%;
+          font-size: 0.8em;
+        }
 
         &:hover {
           color: $color-hover;
@@ -76,6 +105,9 @@
 
   .address-box {
     width: 50%;
+    @include mediaTablet {
+      width: 100%;
+    }
 
     .address-info {
       border-bottom: 2px solid $color-form-border;
@@ -84,9 +116,19 @@
       display: flex;
       align-items: flex-start;
       padding: 4em 5em 4em;
+      @include mediaTablet {
+        border-top: 2px solid $color-form-border;
+        border-bottom: none;
+      }
+      @include mediaMobile {
+        padding: 3em 2em 3em;
+      }
 
       &:last-child {
         border: none;
+        @include mediaTablet {
+          border-top: 2px solid $color-form-border;
+        }
       }
 
       .address-info__label {
@@ -97,6 +139,12 @@
         font-weight: 900;
         line-height: 1.5;
         letter-spacing: 0.075em;
+        @include mediaTablet {
+          font-size: 1em;
+        }
+        @include mediaMobile {
+          font-size: 0.8em;
+        }
       }
 
       .address-info__text {
@@ -106,6 +154,12 @@
         line-height: 2;
         margin-top: -7px;
         color: $color-address;
+        @include mediaTablet {
+          font-size: 1em;
+        }
+        @include mediaMobile {
+          font-size: 0.8em;
+        }
 
         .address-info__links {
           text-decoration: none;
@@ -143,6 +197,12 @@
 
             .address-box__icons {
               font-size: 1.3em;
+              @include mediaTablet {
+                font-size: 1em;
+              }
+              @include mediaMobile {
+                font-size: 0.9em;
+              }
             }
           }
         }
