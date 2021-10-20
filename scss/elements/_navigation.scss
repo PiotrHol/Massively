@@ -1,58 +1,169 @@
-nav {
-  background-color: $color-bg-nav;
-  display: flex;
-  justify-content: space-between;
-  height: 5em;
-
-  .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-main {
-    a {
-      display: inline-block;
-      color: $color-white;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-family: "Source Sans Pro", sans-serif;
+.navigation {
+  .menu-icon {
+    cursor: pointer;
+    display: none;
+    padding: 10px 15px;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 1;
+    background-color: $color-white;
+    box-shadow: 0 0.125rem 0.75rem 0 rgb(30 37 45 / 25%);
+    opacity: 0.8;
+    @include mediaTablet {
+      display: block;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
       font-size: 1em;
       font-weight: 900;
-      letter-spacing: .07em;
-      padding: 1.87em 2em;
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
 
-      &:hover {
-        background-color: $color-bg-nav-hover;
-      }
-    }
+      .navicon {
+        display: block;
+        background-color: $color-text;
+        height: 2px;
+        width: 12px;
+        position: relative;
+        margin-right: 8px;
 
-    .nav-main__active {
-      background-color: $color-white;
-      color: $color-text;
-
-      &:hover {
-        color: $color-hover;
-        background-color: $color-white;
+        &::before, &::after  {
+          content: "";
+          display: block;
+          background-color: $color-text;
+          height: 2px;
+          width: 12px;
+          position: absolute;
+          transition: all 0.2s ease-out;
+        }
+        &::before {
+          top: -4px;
+        }
+        &::after {
+          top: 4px;
+        }
       }
     }
   }
 
-  .nav-icons {
-    margin-right: 2em;
+  .menu-btn {
+    display: none;
 
-    a {
-      display: inline-block;
-      text-decoration: none;
-      margin: 0 1.25rem;
-      color: $color-white;
-      font-size: 1.7em;
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    &:checked ~ nav {
+      transform: translate(35%);
+    }
+  }
 
-      &:hover {
-        color: $color-hover;
+  nav {
+    background-color: $color-bg-nav;
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+    @include mediaTablet {
+      background-color: $color-white;
+      height: 100%;
+      width: 75%;
+      flex-direction: column;
+      justify-content: flex-start;
+      transform: translate(135%);
+      transition: all 0.5s ease-out;
+      position: fixed;
+      top: 0;
+      border-left: 1px solid rgba(33, 41, 49, 0.5);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include mediaTablet {
+        flex-direction: column;
+      }
+    }
+
+    .nav-main {
+      @include mediaTablet {
+        margin-top: 50px;
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      a {
+        display: inline-block;
+        color: $color-white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1em;
+        font-weight: 900;
+        letter-spacing: .07em;
+        padding: 1.87em 2em;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        @include mediaTablet {
+          width: 80%;
+          color: $color-text;
+          border-bottom: 1px solid rgba(33, 41, 49, 0.5);
+        }
+
+        &:hover {
+          background-color: $color-bg-nav-hover;
+        }
+      }
+
+      .nav-main__active {
+        background-color: $color-white;
+        color: $color-text;
+
+        &:hover {
+          color: $color-hover;
+          background-color: $color-white;
+        }
+      }
+    }
+
+    .nav-icons {
+      margin-right: 2em;
+      @include mediaTablet {
+        width: 80%;
+        align-self: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 1.25rem;
+        color: $color-white;
+        font-size: 1.7em;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        @include mediaTablet {
+          color: $color-text;
+          padding-top: 3px;
+          text-align: center;
+          margin: 0.8em 0.8em;
+          font-size: 1.5em;
+          border: 1px solid rgba(33, 41, 49, 0.5);
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+        }
+        @include mediaMobile {
+          margin: 0.8em 0.3em;
+        }
+
+        &:hover {
+          color: $color-hover;
+        }
       }
     }
   }
