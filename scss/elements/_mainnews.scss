@@ -87,6 +87,11 @@
       }
     }
 
+    .main-news__fulltext {
+      width: auto;
+      text-align: justify;
+    }
+
     .main-news__image {
       margin-bottom: 4rem;
       @include mediaMobile {
